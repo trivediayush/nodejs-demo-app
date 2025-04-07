@@ -44,9 +44,12 @@ After successful pipeline execution, your Docker image is pushed to:
 
 docker pull ayusht45cyber/mynodeapp:latest
 docker run -p 3000:3000 ayusht45cyber/mynodeapp:latest
-  
+
+<img src="">
 
 ✅ Summary
 ---------
 
 This project demonstrates a fully automated CI/CD pipeline using GitHub Actions. It ensures that every change is tested, containerized, and deployed to DockerHub with zero manual steps. Great foundation for scalable DevOps workflows.
+
+
