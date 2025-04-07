@@ -1,65 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
+🚀 Node.js CI/CD Pipeline using GitHub Actions & Docker
+=======================================================
 
-  <h1>🚀 Node.js CI/CD Pipeline with GitHub Actions & Docker</h1>
+This project sets up an automated CI/CD pipeline for a simple Node.js application. Every time you push code to the `master` branch, GitHub Actions builds a Docker image and pushes it to DockerHub automatically.
 
-  <p>
-    This project demonstrates how to automate the build and deployment process of a Node.js application using GitHub Actions and Docker. The application is containerized and automatically pushed to DockerHub when changes are made to the main branch.
-  </p>
+📦 Project Structure
+--------------------
 
-  <h2>📦 What This Project Does</h2>
-  <ul>
-    <li>Runs a Node.js web application</li>
-    <li>Uses Docker to containerize the app</li>
-    <li>Automates build and deployment using GitHub Actions</li>
-    <li>Pushes the Docker image to DockerHub</li>
-  </ul>
+*   **app.js** – The main Node.js Express application file
+*   **Dockerfile** – Defines how to build the Docker image
+*   **package.json** – Contains project dependencies and scripts
+*   **.github/workflows/main.yml** – The GitHub Actions workflow file
 
-  <h2>📁 Project File Structure</h2>
-  <p>The project includes the following important files:</p>
-  <ul>
-    <li><code>app.js</code> - The main Node.js application (Express)</li>
-    <li><code>Dockerfile</code> - Instructions for building the Docker image</li>
-    <li><code>package.json</code> - Node.js project dependencies</li>
-    <li><code>.github/workflows/main.yml</code> - The GitHub Actions CI/CD pipeline</li>
-  </ul>
+⚙️ Workflow Explained (main.yml)
+--------------------------------
 
-  <h2>⚙️ CI/CD Workflow Explained</h2>
-  <p>
-    The GitHub Actions workflow is triggered automatically when code is pushed to the <code>main</code> (or <code>master</code>) branch. It performs the following steps:
-  </p>
+The GitHub Actions workflow automates the following:
 
-  <ol>
-    <li><strong>Checkout Code:</strong> Clones the latest version of the repository.</li>
-    <li><strong>Setup Node.js:</strong> Sets up the Node.js environment to match your app's requirements.</li>
-    <li><strong>Install Dependencies:</strong> Installs packages defined in <code>package.json</code>.</li>
-    <li><strong>Run Tests:</strong> Executes tests to validate code integrity.</li>
-    <li><strong>Set up Docker Buildx:</strong> Prepares Docker environment for advanced builds.</li>
-    <li><strong>DockerHub Login:</strong> Uses GitHub Secrets to securely log in to DockerHub.</li>
-    <li><strong>Build and Push Docker Image:</strong> Builds the Docker image and pushes it to DockerHub under your repository.</li>
-  </ol>
+1.  **Triggered on Push:** The workflow starts whenever code is pushed to the `master` branch.
+2.  **Checkout Code:** The source code is pulled from the GitHub repo.
+3.  **Set Up Node.js:** Node.js version 18 is installed to run app dependencies and tests.
+4.  **Install Dependencies:** All packages listed in `package.json` are installed using `npm install`.
+5.  **Run Tests:** Executes `npm test` to ensure app functionality is intact before building.
+6.  **Set Up Docker Buildx:** Prepares the Docker environment for image building.
+7.  **Login to DockerHub:** Uses GitHub Secrets to log in securely using your DockerHub credentials.
+8.  **Build and Push Image:** Builds the Docker image and pushes it to DockerHub under `ayusht45cyber/mynodeapp:latest`.
 
-  <h2>🔐 Secrets Required</h2>
-  <p>To authenticate securely with DockerHub, the workflow uses GitHub secrets:</p>
-  <ul>
-    <li><code>DOCKERHUB_USERNAME</code> – Your DockerHub username</li>
-    <li><code>DOCKERHUB_TOKEN</code> – An access token created from DockerHub</li>
-  </ul>
+🔐 GitHub Secrets Required
+--------------------------
 
-  <h2>🌍 Final Output</h2>
-  <p>
-    After the workflow completes, the built Docker image is available on DockerHub. You can pull and run it locally or in production using:
-  </p>
-  <pre>
+To allow secure DockerHub login, the following secrets must be added in your GitHub repository:
+
+*   `DOCKERHUB_USERNAME` – Your DockerHub username
+*   `DOCKERHUB_TOKEN` – A DockerHub access token (not your password)
+
+📦 Docker Image Info
+--------------------
+
+After successful pipeline execution, your Docker image is pushed to:  
+`docker.io/ayusht45cyber/mynodeapp:latest`
+
+▶️ Run the Image Locally
+------------------------
+
 docker pull ayusht45cyber/mynodeapp:latest
 docker run -p 3000:3000 ayusht45cyber/mynodeapp:latest
-  </pre>
+  
 
-  <h2>✅ Summary</h2>
-  <p>
-    This setup allows for fully automated builds and deployments every time you push new code. It ensures consistency, reduces manual errors, and speeds up your development-to-deployment cycle.
-  </p>
+✅ Summary
+---------
 
-</body>
-</html>
+This project demonstrates a fully automated CI/CD pipeline using GitHub Actions. It ensures that every change is tested, containerized, and deployed to DockerHub with zero manual steps. Great foundation for scalable DevOps workflows.
