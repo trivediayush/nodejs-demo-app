@@ -9,7 +9,7 @@ This project sets up an automated CI/CD pipeline for a simple Node.js applicatio
 *   **app.js** – The main Node.js Express application file
 *   **Dockerfile** – Defines how to build the Docker image
 *   **package.json** – Contains project dependencies and scripts
-*   **.github/workflows/main.yml** – The GitHub Actions workflow file
+*   **.github/workflows/CICD.yml** – The GitHub Actions workflow file
 
 ⚙️ Workflow Explained (CICD.yml)
 --------------------------------
@@ -42,9 +42,9 @@ After successful pipeline execution, your Docker image is pushed to:
 ▶️ Run the Image Locally
 ------------------------
 # Pull the latest version of the Docker image
-<pre> docker pull ayusht45cyber/mynodeapp:latest </pre> <br>
+<pre> docker pull DockerHubusername/mynodeapp:latest </pre> <br>
 # Run the container, mapping port 3000 of the host to port 3000 of the container 
-<pre> docker run -p 3000:3000 ayusht45cyber/mynodeapp:latest</pre>
+<pre> docker run -p 3000:3000 DockerHubusername/mynodeapp:latest</pre>
 
 <br>
 <br>
