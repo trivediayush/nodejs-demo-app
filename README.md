@@ -37,7 +37,7 @@ To allow secure DockerHub login, the following secrets must be added in your Git
 --------------------
 
 After successful pipeline execution, your Docker image is pushed to:  
-`docker.io/ayusht45cyber/mynodeapp:latest`
+`docker.io/DockerhubUsername/mynodeapp:latest`
 
 ▶️ Run the Image Locally
 ------------------------
