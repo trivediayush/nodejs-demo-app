@@ -41,18 +41,23 @@ After successful pipeline execution, your Docker image is pushed to:
 
 ▶️ Run the Image Locally
 ------------------------
-
-`docker pull ayusht45cyber/mynodeapp:latest`
-`docker run -p 3000:3000 ayusht45cyber/mynodeapp:latest`
+# Pull the latest version of the Docker image
+<pre> docker pull ayusht45cyber/mynodeapp:latest </pre> <br>
+# Run the container, mapping port 3000 of the host to port 3000 of the container 
+<pre> docker run -p 3000:3000 ayusht45cyber/mynodeapp:latest</pre>
 
 <br>
+<br>
 
+# The Node App
 <img src="/Screenshots/app.png">
+
+# The CICD Pipeline
 <img src="/Screenshots/cicd.png">
 
-✅ Summary
----------
+📫 Contact
+----------
 
-This project demonstrates a fully automated CI/CD pipeline using GitHub Actions. It ensures that every change is tested, containerized, and deployed to DockerHub with zero manual steps. Great foundation for scalable DevOps workflows.
+Made with ❤️ by [Ayush Trivedi](https://github.com/trivediayush)
 
 
