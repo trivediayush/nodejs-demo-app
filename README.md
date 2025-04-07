@@ -42,10 +42,13 @@ After successful pipeline execution, your Docker image is pushed to:
 ▶️ Run the Image Locally
 ------------------------
 
-docker pull ayusht45cyber/mynodeapp:latest
-docker run -p 3000:3000 ayusht45cyber/mynodeapp:latest
+`docker pull ayusht45cyber/mynodeapp:latest`
+`docker run -p 3000:3000 ayusht45cyber/mynodeapp:latest`
 
-<img src="">
+<br>
+
+<img src="/Screenshots/app.png">
+<img src="/Screenshots/cicd.png">
 
 ✅ Summary
 ---------
