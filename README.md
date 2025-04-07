@@ -11,7 +11,7 @@ This project sets up an automated CI/CD pipeline for a simple Node.js applicatio
 *   **package.json** – Contains project dependencies and scripts
 *   **.github/workflows/main.yml** – The GitHub Actions workflow file
 
-⚙️ Workflow Explained (main.yml)
+⚙️ Workflow Explained (CICD.yml)
 --------------------------------
 
 The GitHub Actions workflow automates the following:
